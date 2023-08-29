@@ -1,0 +1,471 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffefe7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  color: #7ececa;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+nav .logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+nav .icons {
+  display: flex;
+  gap: 15px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+nav .icons button svg {
+  stroke: #7ececa;
+  width: 35px;
+  height: 35px;
+}
+nav .icons button:hover {
+  transform: scale(1.1);
+}
+
+article {
+  color: #7ececa;
+  width: auto;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+article .impact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 50px;
+  gap: 25px;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+}
+article p {
+  font-size: 1.5em;
+}
+article button {
+  background: none;
+  border-style: none;
+}
+article button {
+  width: 12vw;
+  padding: 20px;
+  background-color: #bbd0ff;
+  border-radius: 35px;
+  color: white;
+  font-size: 1em;
+}
+article button:hover {
+  transform: scale(1.1);
+}
+article img {
+  width: 25vw;
+  border-radius: 19px;
+}
+
+section {
+  width: auto;
+  height: auto;
+  padding: 60px;
+}
+section h2 {
+  color: #7ececa;
+  font-size: 2em;
+  font-weight: bold;
+}
+section .healthcare, section .furniture {
+  padding-bottom: 60px;
+}
+section .healthcare h2, section .furniture h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .healthcare .card-section, section .furniture .card-section {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 180px;
+       column-gap: 180px;
+  row-gap: 80px;
+}
+section .healthcare .product-card, section .furniture .product-card {
+  width: 14vw;
+  height: 48vh;
+  background-color: #ffdac6;
+  color: #7ececa;
+  padding: 20px;
+  border-radius: 8px;
+}
+section .healthcare .product-card .icon, section .furniture .product-card .icon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+section .healthcare .product-card .icon svg, section .furniture .product-card .icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #7ececa;
+}
+section .healthcare .product-card .product-image, section .furniture .product-card .product-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: center;
+     object-fit: center;
+}
+section .healthcare .product-card .product-image img, section .furniture .product-card .product-image img {
+  width: 12vw;
+  height: 28vh;
+  background-image: cover;
+  border-radius: 6px;
+}
+section .furniture .product-card {
+  background-color: #babd8d;
+  color: white;
+}
+section .furniture .product-card .icon svg {
+  stroke: white;
+}
+
+section .about-us {
+  padding-bottom: 60px;
+}
+section .about-us h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+section .about-us .compro-innov {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section .about-us .compro-innov .compromise, section .about-us .compro-innov .innovation {
+  display: flex;
+  width: 30vw;
+  gap: 40px;
+  color: #7ececa;
+}
+section .about-us .compro-innov .compromise img, section .about-us .compro-innov .innovation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .about-us .compro-innov .compromise p, section .about-us .compro-innov .innovation p {
+  text-align: center;
+  font-size: 1.5em;
+}
+.gallery {
+  padding-bottom: 60px;
+}
+.gallery h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.gallery .gallery-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .gallery-images img {
+  width: 26vw;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+  border-radius: 16px;
+}
+.gallery .gallery-images img:hover {
+  transform: scale(1.1);
+}
+
+.location {
+  color: #7ececa;
+}
+.location h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.location .map img {
+  width: 78vw;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+  border-radius: 16px;
+}
+.location .map img:hover {
+  transform: scale(1.1);
+}
+.location h3, .location p {
+  font-size: 1.5em;
+}
+
+footer {
+  background-color: #bbd0ff;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  color: white;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+
+/* Mobile styles */
+@media (min-width: 300px) and (max-width: 569px) {
+  article {
+    flex-wrap: wrap;
+    padding-top: 5px;
+  }
+  article .impact-section {
+    padding-top: 1cap;
+    gap: 0;
+  }
+  article img {
+    width: 80vw;
+    height: 50vh;
+    border-radius: 19px;
+  }
+  article h1 {
+    font-size: 1.5em;
+    padding: 0px;
+    margin: 0px;
+  }
+  article p {
+    font-size: 0.9em;
+  }
+  article button {
+    width: 30vw;
+    font-size: 1.1em;
+  }
+  section .healthcare, section .furniture {
+    padding-bottom: 10px;
+  }
+  section .healthcare h2, section .furniture h2 {
+    padding-bottom: 10px;
+  }
+  section .healthcare .card-section, section .furniture .card-section {
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    row-gap: 30px;
+  }
+  section .healthcare .product-card, section .furniture .product-card {
+    width: 35vw;
+    height: 60vh;
+    padding: 10px;
+  }
+  section .healthcare .product-card .product-image img, section .furniture .product-card .product-image img {
+    width: 35vw;
+    height: 30vh;
+  }
+  section .about-us {
+    padding-bottom: 10px;
+  }
+  section .about-us h2 {
+    padding-bottom: 10px;
+  }
+  section .about-us .compro-innov {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  section .about-us .compro-innov .compromise, section .about-us .compro-innov .innovation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  section .about-us .compro-innov .compromise p, section .about-us .compro-innov .innovation p {
+    font-size: 1.2em;
+  }
+  section .about-us .compro-innov .innovation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .gallery {
+    padding-bottom: 10px;
+  }
+  .gallery h2 {
+    padding-bottom: 10px;
+  }
+  .gallery .gallery-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    row-gap: 30px;
+  }
+  .gallery .gallery-images img {
+    width: 50vw;
+    height: 45vh;
+  }
+  .location {
+    padding-bottom: 10px;
+  }
+  .location h2 {
+    padding-bottom: 10px;
+  }
+  .location .map {
+    padding-bottom: 10px;
+  }
+  .location .map img {
+    width: 78vw;
+    height: 25vh;
+  }
+  .location h3, .location p {
+    font-size: 1.2em;
+  }
+  footer {
+    padding: 10px;
+  }
+  footer .social-media {
+    padding-bottom: 10px;
+  }
+}
+/* Tablet styles */
+@media (min-width: 570px) and (max-width: 925px) {
+  article {
+    flex-wrap: wrap;
+    padding-top: 5px;
+  }
+  article .impact-section {
+    padding-top: 20px;
+    gap: 0;
+  }
+  article img {
+    width: 70vw;
+    height: 40vh;
+    border-radius: 19px;
+  }
+  article h1 {
+    font-size: 1.7em;
+    padding: 0px;
+    margin: 0px;
+  }
+  article p {
+    font-size: 1.4em;
+  }
+  article button {
+    width: 20vw;
+    font-size: 1.5em;
+  }
+  section .healthcare, section .furniture {
+    padding-bottom: 20px;
+  }
+  section .healthcare h2, section .furniture h2 {
+    padding-bottom: 20px;
+  }
+  section .healthcare .card-section, section .furniture .card-section {
+    -moz-column-gap: 120px;
+         column-gap: 120px;
+    row-gap: 60px;
+  }
+  section .healthcare .product-card, section .furniture .product-card {
+    width: 25vw;
+    height: 52vh;
+    padding: 10px;
+  }
+  section .healthcare .product-card .product-image img, section .furniture .product-card .product-image img {
+    width: 25vw;
+    height: 26vh;
+  }
+  section .about-us {
+    padding-bottom: 30px;
+  }
+  section .about-us h2 {
+    padding-bottom: 30px;
+  }
+  section .about-us .compro-innov {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  section .about-us .compro-innov .compromise, section .about-us .compro-innov .innovation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  section .about-us .compro-innov .innovation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .gallery {
+    padding-bottom: 30px;
+  }
+  .gallery h2 {
+    padding-bottom: 30px;
+  }
+  .location {
+    padding-bottom: 30px;
+  }
+  .location h2 {
+    padding-bottom: 30px;
+  }
+  .location .map {
+    padding-bottom: 20px;
+  }
+  .location .map img {
+    width: 88vw;
+    height: 45vh;
+  }
+  footer {
+    padding: 20px;
+  }
+  footer .social-media {
+    padding-bottom: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

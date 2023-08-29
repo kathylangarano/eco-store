@@ -1,0 +1,477 @@
+$primary-color: #ffefe7;
+$secondary-color: #ffdac6;
+$tertiary-color: #babd8d;
+$primary-text-color: #7ececa;
+$quaternary-color:#bbd0ff;
+$font-stack: 'IBM Plex Sans', sans-serif;
+$paragraph-size:1.5em;
+
+@mixin flexCenter($direction, $content, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+@mixin buttonStyle{
+    button{
+        background: none;
+        border-style: none;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $primary-color;
+    font-family: $font-stack;
+    
+}
+nav{
+    color: $primary-text-color;
+    width: auto;
+    @include flexCenter(row,space-between,center);
+    padding:15px ;
+    .logo{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+      }
+    .icons{
+        display: flex;
+        gap:15px;
+        @include buttonStyle;
+
+        button{
+            svg{
+                stroke: $primary-text-color; 
+                width:35px;
+                height:35px; 
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+}
+article{
+    color: $primary-text-color;
+    width: auto;
+    padding-top: 70px; 
+    @include flexCenter(row,space-around, center);
+    .impact-section{
+        @include flexCenter(column, space-evenly ,flex-start );
+        padding-top: 50px;
+        gap: 25px;
+    }
+    h1{
+        font-size: 3em;
+        padding: 0px;
+        margin: 0px;
+    }
+    p{
+        font-size: $paragraph-size;
+    }
+    @include buttonStyle;
+    button{
+        width: 12vw;
+        padding: 20px;
+        background-color: $quaternary-color;
+        border-radius:35px;
+        color:white;
+        font-size: 1em;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    img{
+            width: 25vw;  
+            border-radius: 19px;
+        }
+}
+section{
+    width: auto;
+    height: auto;
+    padding: 60px;
+    h2{
+        color: $primary-text-color;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .healthcare{
+        padding-bottom: 60px;
+        h2{
+            font-weight: 300;
+            padding-bottom: 60px;
+        }
+        .card-section{
+            width: auto;
+            height: auto;
+            @include flexCenter(row,space-evenly, center );
+            flex-wrap: wrap;
+            column-gap: 180px;
+            row-gap: 80px;
+        }
+        .product-card{
+            width: 14vw;
+            height: 48vh;
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding:20px ;
+            border-radius:8px ;
+            .icon{
+                width: 100%;
+                @include flexCenter(row,flex-end, flex-end );
+                padding-bottom: 10px;
+                svg{
+                    width: 28px;
+                    height: 28px;
+                    stroke:#7ececa; 
+                }
+            }
+            .product-image{
+                width: 100%;
+                height: auto;
+                @include flexCenter(row,center,center );
+                object-fit: center;
+                img{
+                    width:12vw;
+                    height: 28vh;
+                    background-image: cover;
+                    border-radius: 6px;
+                }
+            }
+        }
+        
+    }
+    .furniture{
+        @extend .healthcare;
+        .product-card{
+            background-color:$tertiary-color;
+            color: white;
+            .icon{
+                svg{
+                    stroke:white; 
+                }
+            }
+        }
+    }
+
+
+}
+section{
+    .about-us{
+        padding-bottom: 60px;
+        h2{
+            font-weight: bold;
+            padding-bottom: 60px;
+        }
+        .compro-innov{
+            @include flexCenter(row,space-evenly, center );
+            .compromise{
+                display: flex;
+                width: 30vw;
+                gap: 40px;
+                color: $primary-text-color;
+                img{
+                    object-fit: contain;
+                }
+                p{
+                    text-align: center;
+                    font-size: $paragraph-size;
+                }
+            }
+            .innovation{
+                @extend .compromise;
+            }
+        }
+
+    }
+    
+}
+    .gallery{
+        padding-bottom: 60px;
+        h2{
+            font-weight: bold;
+            padding-bottom: 60px;
+        }
+        .gallery-images{
+            @include flexCenter(row,space-between,center );
+            img{
+                width:26vw;
+                height:45vh;
+                object-fit: cover;
+                object-position: 5px 35%;
+                border-radius: 16px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .location{
+        color:$primary-text-color;
+        h2{
+            font-weight: bold;
+            padding-bottom: 60px;
+            padding-top: 60px;
+
+        }
+        .map{
+            @include flexCenter(row,center, center );
+            padding-bottom: 50px;
+            img{
+                width:78vw;
+                height:60vh;
+                object-fit: cover;
+                object-position: 5px 35%;
+                border-radius: 16px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        h3,p{
+            font-size: $paragraph-size;
+        }
+    }
+footer{
+    background-color: $quaternary-color;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    color: white;
+    .social-media{
+        @include flexCenter(row,center,center );
+        gap:40px;
+        padding-bottom: 20px;
+
+    }
+}
+
+
+
+
+/* Mobile styles */
+@media (min-width: 300px) and (max-width: 569px) {
+    article {
+        flex-wrap: wrap;
+        padding-top: 5px; 
+        .impact-section{
+            padding-top: 1cap;
+            gap: 0;
+        }
+        img{
+            width: 80vw;
+            height: 50vh;  
+            border-radius: 19px;
+        }
+        h1{
+            font-size:$paragraph-size;
+            padding: 0px;
+            margin: 0px;
+        }
+        p{
+            font-size: 0.9em;
+        }
+        button{
+            width: 30vw;
+            font-size: 1.1em;
+
+            
+    }
+
+}
+    section {
+        .healthcare{
+            padding-bottom: 10px;
+            h2{
+                padding-bottom: 10px;
+            }
+            .card-section{
+                column-gap: 70px;
+                row-gap: 30px;
+            }
+            .product-card{
+                width: 35vw; 
+                height: 60vh;    
+                padding:10px ;
+                .product-image{
+                    img{
+                        width:35vw;
+                        height: 30vh;
+                    }
+                }
+            }       
+        }
+}
+    section{
+        .about-us{
+            padding-bottom: 10px;
+            h2{
+                padding-bottom: 10px;
+            }
+            .compro-innov{
+                @include flexCenter(column,flex-start,center );
+                .compromise{
+                    @include flexCenter(column,flex-start,center ); 
+                    p{
+                        
+                        font-size: 1.2em;
+                    }         
+                }
+                
+                .innovation{
+                    @include flexCenter(column,flex-end,center );          
+                }            
+            }
+        }  
+    }
+    .gallery {
+        padding-bottom: 10px;   
+        h2{
+            
+            padding-bottom: 10px;
+        }
+        .gallery-images{
+            @include flexCenter(column,space-between,center );
+            column-gap: 70px;
+            row-gap: 30px;
+            img{
+                width:50vw;
+                height:45vh;
+            
+            }
+        }
+     }
+    
+    .location {
+        padding-bottom: 10px;
+        h2{
+            padding-bottom: 10px;
+            
+        }
+            .map{
+                padding-bottom: 10px;
+                
+                img{
+                    width:78vw;
+                    height:25vh;
+                }
+            } 
+            h3,p{
+                font-size: 1.2em;
+            }
+    }                                     
+    
+    footer {
+    padding: 10px;
+        .social-media{
+            padding-bottom: 10px;
+
+        }
+    }
+}
+
+
+/* Tablet styles */
+@media (min-width: 570px) and (max-width: 925px) {
+    article {
+        flex-wrap: wrap;
+        padding-top: 5px; 
+        .impact-section{
+            padding-top: 20px;
+            gap: 0;
+        }
+        img{
+            width: 70vw;
+            height: 40vh;  
+            border-radius: 19px;
+        }
+        h1{
+            font-size:1.7em;
+            padding: 0px;
+            margin: 0px;
+        }
+        p{
+            font-size: 1.4em;
+        }
+        button{
+            width: 20vw;
+            font-size: $paragraph-size;
+
+            
+    }
+
+}
+    section {
+        .healthcare{
+            padding-bottom: 20px;
+            h2{
+                padding-bottom: 20px;
+            }
+            .card-section{
+                column-gap: 120px;
+                row-gap: 60px;
+            }
+            .product-card{
+                width: 25vw; 
+                height: 52vh;    
+                padding:10px ;
+                .product-image{
+                    img{
+                        width:25vw;
+                        height: 26vh;
+                    }
+                }
+            }       
+        }
+}
+    section{
+        .about-us{
+            padding-bottom: 30px;
+            h2{
+                padding-bottom: 30px;
+            }
+            .compro-innov{
+                @include flexCenter(column,flex-start,center );
+                .compromise{
+                    @include flexCenter(column,flex-start,center );          
+                }
+                .innovation{
+                    @include flexCenter(column,flex-end,center );          
+                }            
+            }
+        }  
+    }
+    .gallery {
+        padding-bottom: 30px;   
+        h2{
+            
+            padding-bottom: 30px;
+        }
+     }
+    
+    .location {
+        padding-bottom: 30px;
+        h2{
+            padding-bottom: 30px;
+        }
+            .map{
+                padding-bottom: 20px;
+                img{
+                    width:88vw;
+                    height:45vh;
+                }
+            } 
+    }                                     
+    
+    footer {
+    padding: 20px;
+        .social-media{
+            padding-bottom: 10px;
+
+        }
+    }
+}
