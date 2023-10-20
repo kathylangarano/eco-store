@@ -79,7 +79,7 @@ All the contributions are welcome to enhance and improve the functionality of th
 
 ## Credits
 
-This project is based on the [Sass course] by [Platzi]([https://github.com/platzi]).
+This project is based on the Sass course by [Platzi]([https://github.com/platzi]).
 
 Thank you for your interest in our eco-fashion e-commerce website project!
 
