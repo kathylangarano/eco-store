@@ -81,7 +81,7 @@ All the contributions are welcome to enhance and improve the functionality of th
 
 This project is based on the Sass course by [Platzi]([https://github.com/platzi]).
 
-Thank you for your interest in our eco-fashion e-commerce website project!
+Thank you for your interest in eco-store e-commerce website project!
 
 
 
